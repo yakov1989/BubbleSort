@@ -14,18 +14,14 @@ namespace BubbleSort
 
          static void BubbleSort( int[] arr)
         {
-            int temp = 0;
+            
             for (int i = 0; i < arr.Length; i++)
             {
                 for(int j = i+1; j < arr.Length ; j++)
                 {
                     if (arr[i] > arr[j])
                     {
-                        SortArr( arr[i], arr[j]);
-
-                        temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp; 
+                        SortArr( ref arr[i], ref arr[j]);
                     }
                 }
 
@@ -35,7 +31,7 @@ namespace BubbleSort
         }
 
 
-        static void SortArr(int v1,  int v2)
+        static void SortArr(ref int v1,  ref int v2)
         {
             int temp = 0;
 
