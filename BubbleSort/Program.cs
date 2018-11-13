@@ -9,7 +9,7 @@ namespace BubbleSort
 
             int[] arr = { 9, 8, 4, 3, 1, 6, 7 };
            BubbleSort( arr);
-            printarr(arr);
+            PrintArr(arr);
         }
 
          static void BubbleSort( int[] arr)
@@ -21,11 +21,11 @@ namespace BubbleSort
                 {
                     if (arr[i] > arr[j])
                     {
-                        SortArr(ref arr[i], ref arr[j]);
+                        SortArr( arr[i], arr[j]);
 
                         temp = arr[i];
                         arr[i] = arr[j];
-                        arr[j] = temp;
+                        arr[j] = temp; 
                     }
                 }
 
@@ -35,17 +35,16 @@ namespace BubbleSort
         }
 
 
-        static void SortArr(ref int v1, ref int v2)
+        static void SortArr(int v1,  int v2)
         {
             int temp = 0;
 
             temp = v1;
             v1 = v2;
             v2 = temp;
-
         }
 
-        static void printarr(int[] arr)
+        static void PrintArr(int[] arr)
         {
             for(int i = 0; i < arr.Length; i++)
             {
